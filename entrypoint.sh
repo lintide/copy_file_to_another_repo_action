@@ -22,6 +22,9 @@ OUTPUT_BRANCH="$INPUT_DESTINATION_BRANCH"
 
 CLONE_DIR=$(mktemp -d)
 
+git-lfs -v
+git -v
+
 echo "Cloning destination git repository"
 GIT_CLONE_PROTECTION_ACTIVE=false
 git config --global user.email "$INPUT_USER_EMAIL"
