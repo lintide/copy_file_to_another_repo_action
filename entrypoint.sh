@@ -26,7 +26,7 @@ git-lfs -v
 git -v
 
 echo "Cloning destination git repository"
-GIT_CLONE_PROTECTION_ACTIVE=false
+export GIT_CLONE_PROTECTION_ACTIVE=false
 git config --global user.email "$INPUT_USER_EMAIL"
 git config --global user.name "$INPUT_USER_NAME"
 git clone --depth 1 "https://x-access-token:$API_TOKEN_GITHUB@$INPUT_GIT_SERVER/$INPUT_DESTINATION_REPO.git" --single-branch --branch $INPUT_DESTINATION_BRANCH "$CLONE_DIR"
